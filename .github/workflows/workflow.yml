@@ -1,0 +1,22 @@
+name: React CI
+
+# to automatically trigger a workflow when code is pushed to the main branch
+on:
+  push: 
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+    
+    # checkout the code, install dependencies, build the app and run tests
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm install
+      - run: npm build
+      - run: npm test
