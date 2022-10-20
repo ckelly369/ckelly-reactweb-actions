@@ -6,6 +6,7 @@ on:
     branches:
       - 'main'
 
+# run on GitHub-hosted runner
 jobs:
   build:
     runs-on: ubuntu-latest
