@@ -1,4 +1,4 @@
 module "main_vpc" {
-  source      = "../../modules/vpc"
+  source      = "../../modules/infrastructure"
   environment = var.environment
 }
